@@ -1,0 +1,10 @@
+groups:
+  - name: node_load1
+    rules:
+      - alert: node_load1_alert
+        expr: node_load1 > 2
+        for: 1m
+        annotations:
+          summary: "avg node load in 1minute in {{ $labels.instance }}"
+          description: "avg node load in 1 minute is {{ $value }} "
+

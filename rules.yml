@@ -1,0 +1,9 @@
+
+groups:
+  - name: node_load1
+    rules:
+      - record: node_load1_rule  #Monitor the 1-minute load average
+        expr: node_load1
+        labels:
+          node1: node_load1
+
